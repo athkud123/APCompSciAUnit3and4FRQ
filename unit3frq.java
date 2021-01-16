@@ -108,3 +108,41 @@ else
 }
 
 // Once again, if statements and operators are used here to show the two selection router.If option 1 is equal to option 2, then print out true, but if they aren't equal then print ou false.
+
+
+
+
+--------Question 2--------
+    
+ Write the method drawSquare below
+ Precondition: 0 <= x < 10, 0 < y <= 10, len > 0
+ Draws square on 10x10 (x,y) grid
+ Print square's side length and area
+ Upper left cornerof square willl be located
+
+ 
+public class Draw
+{
+    public void drawLine(int x1, int y1, int x2, int y2)
+    {
+    }
+    public void drawSquare (int x, int y, int Len)
+    {
+        if (Len > y && y <= (10 - x))
+        {
+            Len = y;
+        }
+        else if (Len > (10 - x) && (10 - x) <= y)
+        {
+            Len = 10 - x;
+        }
+        drawLine (x, y, x + Len, y);
+        drawLine (x, y, x, y - Len);
+        drawLine(x, y - Len, x + Len, y - Len);
+        drawLine (x + Len, y, x + Len, y - Len);
+        System.out.println("The area is: " + Len * Len);
+        System.out.println("The perimeter is: " + Len * 4);
+    }
+}
+
+// This code satisfies all conditions listed in the problem.
